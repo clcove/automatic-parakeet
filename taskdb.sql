@@ -1,0 +1,153 @@
+-- CREATE DATABASE taskdb
+--     DEFAULT CHARACTER SET = 'utf8mb4';
+
+-- -- 创建用户表
+-- CREATE TABLE users
+-- (
+--    UserID INT(4) PRIMARY KEY AUTO_INCREMENT
+--  , UserName varchar(32) NOT NULL
+--  , NickName VARCHAR(32) NOT NULL
+--  , RoleID int(4) NOT NULL
+--  , Email VARCHAR(20) NOT NULL
+--  , Phone VARCHAR(20) NOT NULL
+--  , EncryptedPassword VARCHAR(64) NOT NULL
+--  , `Status` int(1) 
+--  , UpdatedBy int(4) not NULL
+--  , TimeUpdated DATETIME
+--  , CreatedBy INT(4) NOT NULL
+--  , TimeCreated DATETIME
+-- );
+
+
+-- 创建角色
+-- CREATE TABLE roles
+-- (
+--    RoleID INT(4) PRIMARY KEY AUTO_INCREMENT
+--  , Roles varchar(32) NOT NULL
+--  , UpdatedBy int(4) not NULL
+--  , TimeUpdated DATETIME
+--  , CreatedBy INT(4) NOT NULL
+--  , TimeCreated DATETIME
+-- );
+-- 创建角色
+-- CREATE TABLE projects
+-- (
+--    ProjectID INT(4) PRIMARY KEY AUTO_INCREMENT
+--  , Project varchar(64) NOT NULL
+--  , UpdatedBy int(4) not NULL
+--  , TimeUpdated DATETIME
+--  , CreatedBy INT(4) NOT NULL
+--  , TimeCreated DATETIME
+-- );
+-- 创建角色
+-- CREATE TABLE tasktypes
+-- (
+--    TaskTypeID INT(4) PRIMARY KEY AUTO_INCREMENT
+--  , TaskType varchar(32) NOT NULL
+--  , UpdatedBy int(4) not NULL
+--  , TimeUpdated DATETIME
+--  , CreatedBy INT(4) NOT NULL
+--  , TimeCreated DATETIME
+-- );
+-- CREATE TABLE taskstatus
+-- (
+--    TaskStatusID INT(4) PRIMARY KEY AUTO_INCREMENT
+--  , TaskStatus varchar(32) NOT NULL
+--  , UpdatedBy int(4) not NULL
+--  , TimeUpdated DATETIME
+--  , CreatedBy INT(4) NOT NULL
+--  , TimeCreated DATETIME
+-- );
+-- CREATE TABLE tasks
+-- (
+--    TaskSID INT(4) PRIMARY KEY AUTO_INCREMENT
+--  , Task varchar(64) NOT NULL
+--  , AssignedTouserID int(4) not NULL
+--  , TaskTypeID int(4) not NULL
+--  , TaskStatusID int(4) not NULL
+--  , ProhectID int(4) not NULL
+--  , UpdatedBy int(4) not NULL
+--  , TimeUpdated DATETIME
+--  , CreatedBy INT(4) NOT NULL
+--  , TimeCreated DATETIME
+-- );
+
+-- CREATE TABLE taskdetails
+-- (
+--    TaskDetailsID INT(4) PRIMARY KEY AUTO_INCREMENT
+--  , TaskID int(4) not NULL
+--  , TaskDetail varchar(32) NOT NULL
+--  , UpdatedBy int(4) not NULL
+--  , TimeUpdated DATETIME
+--  , CreatedBy INT(4) NOT NULL
+--  , TimeCreated DATETIME
+-- );
+
+-- INSERT INTO roles
+-- (
+--    Roles
+--  , UpdatedBy
+--  , TimeUpdated
+--  , CreatedBy
+--  , TimeCreated
+-- )
+-- VALUES
+-- (
+--    'Administrator'
+--  , 1
+--  , NOW()
+--  , 1
+--  , NOW()
+-- )
+-- -- ;
+-- INSERT INTO roles
+-- (
+--    Roles
+--  , UpdatedBy
+--  , TimeUpdated
+--  , CreatedBy
+--  , TimeCreated
+-- )
+-- VALUES
+-- (
+--    'Development'
+--  , 1
+--  , NOW()
+--  , 1
+--  , NOW()
+-- )
+-- ,
+-- (
+--    'Customer'
+--  , 1
+--  , NOW()
+--  , 1
+--  , NOW()
+-- )
+-- ,
+-- (
+--    'Guest'
+--  , 1
+--  , NOW()
+--  , 1
+--  , NOW()
+-- )
+-- ;
+-- INSERT INTO taskstatus
+-- (TaskStatus, `Status`, UpdatedBy, TimeUpdated, CreatedBy, TimeCreated)
+-- VALUES
+-- ('Assigned', 1, 1, NOW(), 1, NOW())
+-- ,('In Development', 1, 1, NOW(), 1, NOW())
+-- ,('In Test', 1, 1, NOW(), 1, NOW())
+-- ,('Upgrade Pending', 1, 1, NOW(), 1, NOW())
+-- ,('Confirmation Needed', 1, 1, NOW(), 1, NOW())
+-- ,('Resolved', 1, 1, NOW(), 1, NOW());
+-- INSERT INTO tasktypes
+-- (TaskType, UpdatedBy, TimeUpdated, CreatedBy, TimeCreated)
+-- VALUES
+-- ('Bug', 1, NOW(), 1, NOW())
+-- ,('How To', 1, NOW(), 1, NOW())
+-- ,('Feature Request', 1, NOW(), 1, NOW())
+-- ,('Documentation', 1, NOW(), 1, NOW())
+-- ,('Data Conversions', 1, NOW(), 1, NOW())
+-- ,('Installation', 1, NOW(), 1, NOW());
